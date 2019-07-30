@@ -1,0 +1,17 @@
+version: "2.3"
+
+services:
+  db:
+    environment:
+      - MYSQL_ROOT_PASSWORD=tiramis
+
+  web:
+    volumes:
+      - tiramis-sync:/app:nocopy
+    stdin_open: true
+    tty: true
+
+volumes:
+  tiramis-sync:
+    external: true
+

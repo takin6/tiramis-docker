@@ -1,0 +1,54 @@
+version: "2.3"
+
+services:
+  db:
+    hostname: db
+    restart: always
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql.cnf:/etc/mysql/conf.d/custom.cnf
+      - /var/lib/mysql
+    mem_limit: 1G
+    cpus: 0.8
+
+  redis:
+    restart: always
+    image: redis:alpine
+    mem_limit: 128M
+    cpus: 0.2
+
+  mongo:
+    restart: always
+    image: mongo:3.6.3
+    mem_limit: 256M
+    cpus: 0.5
+
+  web:
+    restart: always
+    build: .
+    working_dir: /app
+    ports:
+      - 3000:3000
+    depends_on:
+      db:
+        condition: service_started
+      redis:
+        condition: service_started
+      mongo:
+        condition: service_started
+    env_file:
+      - variables.env
+    cpus: 1
+    mem_limit: 1536M
+    mem_reservation: 1G
+    oom_kill_disable: true
+
+volumes:
+  mysql.cnf:
+
+networks:
+  default:
+    external:
+      name: tiramis-network
