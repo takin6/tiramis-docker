@@ -18,6 +18,16 @@ http://monsat.hatenablog.com/entry/generating-ssh-keys-for-github
 Tell me your public key personally to me if you wan to contribute!  
 email: takayukiinoue116@gmail.com  
 
+- Add ./variables.env
+DB_HOST=db
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=<custom password>
+REDIS_HOST=redis
+REDIS_SIDEKIQ_URL=redis://redis:6379/0
+REDIS_CABLE_URL=redis://redis:6379/1
+MONGO_HOST=mongo:27017
+
 ## Compose Environment
 Run Commands
 ```
