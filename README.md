@@ -13,6 +13,11 @@ https://qiita.com/seiyatakahashi/items/1447c401c928d08a040b
 - Install Docker for Mac  
 https://docs.docker.com/docker-for-mac/  
 
+- Add public ssh key to github  
+http://monsat.hatenablog.com/entry/generating-ssh-keys-for-github  
+Tell me your public key personally to me if you wan to contribute!  
+email: takayukiinoue116@gmail.com  
+
 ## Compose Environment
 Run Commands
 ```
