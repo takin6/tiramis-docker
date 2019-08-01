@@ -1,4 +1,4 @@
-FROM ruby:2.6.3
+FROM ruby:2.6.3-stretch
 
 RUN apt-get update && \ 
     apt-get install -y build-essential libmagickwand-dev \
