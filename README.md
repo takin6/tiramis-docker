@@ -26,6 +26,16 @@ DB_USERNAME=root
 DB_PASSWORD=<custom password>
 REDIS_HOST=redis
 MONGO_HOST=mongo:27017
+REDIS_HOST=redis 
+REDIS_SIDEKIQ_URL=redis://redis:6379/0 
+REDIS_CABLE_URL=redis://redis:6379/1 
+MONGO_HOST=mongo:27017 
+LINE_LOGIN_ID=<> 
+LINE_LOGIN_SECRET=<>
+LINE_CHANNEL_TOKEN=<> 
+LINE_CHANNEL_SECRET=<> 
+LIFF_URL=<> 
+ELASTICSEARCH_URL=http://elasticsearch:9200
 ```
 
 ## Compose Environment
@@ -37,7 +47,7 @@ $ git clone git@github.com:takin6/tiramis.git
 $ bundle install --path vendor/bundle
 $ brew install unison
 $ brew install eugenmayer/dockersync/unox
-$ docker network create tabi-network
+$ docker network create tiramis-network
 
 $ bundle exec docker-sync-stack start
 ``` 
