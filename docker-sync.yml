@@ -3,8 +3,8 @@ options:
   compose-file-path: 'docker-compose.yml'
   compose-dev-file-path: 'docker-compose.override.yml'
 syncs:
-  tiramis-sync:
-    src: './tiramis'
+  uzumeshi-sync:
+    src: './uzumeshi'
     monit_enable: true
     monit_interval: 10
     monit_high_cpu_cycles: 3

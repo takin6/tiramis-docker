@@ -3,15 +3,15 @@ version: "2.3"
 services:
   db:
     environment:
-      - MYSQL_ROOT_PASSWORD=tiramis
+      - MYSQL_ROOT_PASSWORD=uzumeshi
 
   web:
     volumes:
-      - tiramis-sync:/app:nocopy
+      - uzumeshi-sync:/app:nocopy
     stdin_open: true
     tty: true
 
 volumes:
-  tiramis-sync:
+  uzumeshi-sync:
     external: true
 

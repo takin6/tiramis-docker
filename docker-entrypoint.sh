@@ -25,9 +25,9 @@ bundle check || bundle install --jobs=4 --retry=3
 
 echo "Running migrations..."
 
-rails db:migrate 2>/dev/null || rails db:setup
+bundle exec rails db:migrate 2>/dev/null || bundle exec rails db:setup
 
 bundle exec sidekiq -C config/sidekiq.yml
 
-rails server -b 0.0.0.0
+bundle exec rails server -b 0.0.0.0
 

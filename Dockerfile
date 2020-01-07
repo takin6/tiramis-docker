@@ -15,8 +15,8 @@ ENV APP_ROOT /app
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
 
-ADD ./tiramis/Gemfile $APP_ROOT/Gemfile 
-ADD ./tiramis/Gemfile.lock $APP_ROOT/Gemfile.lock 
+ADD ./uzumeshi/Gemfile $APP_ROOT/Gemfile 
+ADD ./uzumeshi/Gemfile.lock $APP_ROOT/Gemfile.lock 
 RUN gem install bundler && bundle install --jobs 20 --retry 5
 
 RUN apt-get remove -y build-essential dpkg-dev && apt-get clean
