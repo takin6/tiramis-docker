@@ -1,4 +1,4 @@
-# tiramis-docker #
+# uzumeshi-docker #
 
 
 ## Premise
@@ -41,13 +41,13 @@ ELASTICSEARCH_URL=http://elasticsearch:9200
 ## Compose Environment
 Run Commands
 ```
-$ git clone git@github.com:takin6/tiramis-docker.git
+$ git clone git@github.com:takin6/uzumeshi-docker.git
 $ cd tiramis-docker
-$ git clone git@github.com:takin6/tiramis.git
+$ git clone git@github.com:takin6/uzumeshi.git
 $ bundle install --path vendor/bundle
 $ brew install unison
 $ brew install eugenmayer/dockersync/unox
-$ docker network create tiramis-network
+$ docker network create uzumeshi-network
 
 $ bundle exec docker-sync-stack start
 ``` 
