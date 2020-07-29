@@ -42,7 +42,7 @@ ELASTICSEARCH_URL=http://elasticsearch:9200
 Run Commands
 ```
 $ git clone git@github.com:takin6/uzumeshi-docker.git
-$ cd tiramis-docker
+$ cd uzumeshi-docker
 $ git clone git@github.com:takin6/uzumeshi.git
 $ bundle install --path vendor/bundle
 $ brew install unison
